@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #f5f5f5;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 15%;
+  }
+  
+  /* 
+    The form container now uses a gradient background.
+    It is sized double in height so that we can transition the background-position.
+    Default (Login active): background-position set to center bottom.
+    When the .top class is added (Signup active): it shifts to center top.
+  */
+  .container .form {
+    background: linear-gradient(to top, #ff5722, #121212);
+    background-size: 100% 200%;
+    background-position: center bottom;
+    transition: background-position 0.5s ease;
+    color: #fff;
+    padding: 90px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 50px auto;
+    position: relative;
+  }
+  
+  /* When Signup is active, the background shifts smoothly */
+  .container .form.top {
+    background-position: center top;
+  }
+  
+  /* Hidden class to hide inactive forms */
+  .hidden {
+    display: none;
+  }
+  
+  /* Header section with Login and Sign Up options */
+  .container .form .in-up {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+  
+  .container .form .in-up h2 {
+    margin: 0;
+  }
+  
+  /* Input box styling with icon positioning */
+  .container .form .inputBox {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .container .form .inputBox input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* extra left padding for the icon */
+    background: #121212;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .container .form .inputBox input::placeholder {
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Icon styling */
+  .container .form .inputBox .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  
+  /* Style for the submit button */
+  .container .form input[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #fff;
+    color: #121212;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Paragraph and link styling */
+  .container .form p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .container .form p a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
